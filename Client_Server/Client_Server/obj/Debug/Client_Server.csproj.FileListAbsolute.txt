@@ -1,0 +1,29 @@
+D:\Nam3_HK1\PHL4\Client_Server\Client_Server\bin\Debug\Client_Server.exe.config
+D:\Nam3_HK1\PHL4\Client_Server\Client_Server\bin\Debug\Client_Server.exe
+D:\Nam3_HK1\PHL4\Client_Server\Client_Server\bin\Debug\Client_Server.pdb
+D:\Nam3_HK1\PHL4\Client_Server\Client_Server\obj\Debug\Client_Server.csprojAssemblyReference.cache
+D:\Nam3_HK1\PHL4\Client_Server\Client_Server\obj\Debug\Client_Server.clientForm.resources
+D:\Nam3_HK1\PHL4\Client_Server\Client_Server\obj\Debug\Client_Server.Properties.Resources.resources
+D:\Nam3_HK1\PHL4\Client_Server\Client_Server\obj\Debug\Client_Server.csproj.GenerateResource.cache
+D:\Nam3_HK1\PHL4\Client_Server\Client_Server\obj\Debug\Client_Server.csproj.CoreCompileInputs.cache
+D:\Nam3_HK1\PHL4\Client_Server\Client_Server\obj\Debug\Client_Server.exe
+D:\Nam3_HK1\PHL4\Client_Server\Client_Server\obj\Debug\Client_Server.pdb
+F:\Third Year\PBL4\Client_Server\Client_Server\bin\Debug\Client_Server.exe.config
+F:\Third Year\PBL4\Client_Server\Client_Server\bin\Debug\Client_Server.exe
+F:\Third Year\PBL4\Client_Server\Client_Server\bin\Debug\Client_Server.pdb
+F:\Third Year\PBL4\Client_Server\Client_Server\obj\Debug\Client_Server.csprojAssemblyReference.cache
+F:\Third Year\PBL4\Client_Server\Client_Server\obj\Debug\Client_Server.clientForm.resources
+F:\Third Year\PBL4\Client_Server\Client_Server\obj\Debug\Client_Server.Properties.Resources.resources
+F:\Third Year\PBL4\Client_Server\Client_Server\obj\Debug\Client_Server.csproj.GenerateResource.cache
+F:\Third Year\PBL4\Client_Server\Client_Server\obj\Debug\Client_Server.exe
+F:\Third Year\PBL4\Client_Server\Client_Server\obj\Debug\Client_Server.pdb
+D:\Nam3_HK1\PHL4\chiminh\Client_Server\Client_Server\bin\Debug\Client_Server.exe.config
+D:\Nam3_HK1\PHL4\chiminh\Client_Server\Client_Server\bin\Debug\Client_Server.exe
+D:\Nam3_HK1\PHL4\chiminh\Client_Server\Client_Server\bin\Debug\Client_Server.pdb
+D:\Nam3_HK1\PHL4\chiminh\Client_Server\Client_Server\obj\Debug\Client_Server.csprojAssemblyReference.cache
+D:\Nam3_HK1\PHL4\chiminh\Client_Server\Client_Server\obj\Debug\Client_Server.clientForm.resources
+D:\Nam3_HK1\PHL4\chiminh\Client_Server\Client_Server\obj\Debug\Client_Server.Properties.Resources.resources
+D:\Nam3_HK1\PHL4\chiminh\Client_Server\Client_Server\obj\Debug\Client_Server.csproj.GenerateResource.cache
+D:\Nam3_HK1\PHL4\chiminh\Client_Server\Client_Server\obj\Debug\Client_Server.csproj.CoreCompileInputs.cache
+D:\Nam3_HK1\PHL4\chiminh\Client_Server\Client_Server\obj\Debug\Client_Server.exe
+D:\Nam3_HK1\PHL4\chiminh\Client_Server\Client_Server\obj\Debug\Client_Server.pdb

@@ -1,0 +1,10 @@
+D:\Nam3_HK1\PHL4\Client_Server\Client_Server\bin\Release\Client_Server.exe.config
+D:\Nam3_HK1\PHL4\Client_Server\Client_Server\bin\Release\Client_Server.exe
+D:\Nam3_HK1\PHL4\Client_Server\Client_Server\bin\Release\Client_Server.pdb
+D:\Nam3_HK1\PHL4\Client_Server\Client_Server\obj\Release\Client_Server.csprojAssemblyReference.cache
+D:\Nam3_HK1\PHL4\Client_Server\Client_Server\obj\Release\Client_Server.clientForm.resources
+D:\Nam3_HK1\PHL4\Client_Server\Client_Server\obj\Release\Client_Server.Properties.Resources.resources
+D:\Nam3_HK1\PHL4\Client_Server\Client_Server\obj\Release\Client_Server.csproj.GenerateResource.cache
+D:\Nam3_HK1\PHL4\Client_Server\Client_Server\obj\Release\Client_Server.csproj.CoreCompileInputs.cache
+D:\Nam3_HK1\PHL4\Client_Server\Client_Server\obj\Release\Client_Server.exe
+D:\Nam3_HK1\PHL4\Client_Server\Client_Server\obj\Release\Client_Server.pdb

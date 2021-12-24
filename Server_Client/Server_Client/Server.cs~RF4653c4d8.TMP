@@ -1,0 +1,122 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Net;
+using System.Net.Sockets;
+using System.IO;
+using org.apache.pdfbox.pdmodel;
+using org.apache.pdfbox.util;
+using System.Windows.Forms;
+using System.Diagnostics;
+
+namespace Server_Client
+{
+    class Server
+    {
+        IPEndPoint end;
+        Socket sock;
+        public Server()
+        {
+            end = new IPEndPoint(IPAddress.Any, 5000);
+            sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
+            sock.Bind(end);
+
+        }
+        public static string path;
+        public static string MessageCurrent = "Stopped";
+        public void StartServer()
+        {
+            try
+            {   //Khoi tao thah phan
+                sock.Listen(100);
+                while (true)
+                { 
+                    MessageCurrent = "It work and look for files";
+                    Socket clientSock = sock.Accept();
+                    byte[] clientData = new byte[1024 * 5000];
+
+                    //Nhan file
+                    int receiveByteLen = clientSock.Receive(clientData); //do value vao clientData
+                    MessageCurrent = "Receiving File...";
+                    System.Threading.Thread.Sleep(2000);
+                    int fNameLen = BitConverter.ToInt32(clientData, 0); //
+                    string fName = Encoding.ASCII.GetString(clientData, 4, fNameLen);//bat dau` tu byte thu 4, chieu dai fNameLen
+                    //
+                    string convertType = fName.Substring(fName.IndexOf("/") + 1);
+                    fName = fName.Substring(0, fName.IndexOf("/"));
+                    MessageBox.Show(fName + "|" + convertType);
+                    //
+                    string txbFileName = path + "/" + fName;
+
+                    BinaryWriter writer = new BinaryWriter(File.Open(path + "/" + fName, FileMode.Append));
+                    writer.Write(clientData, 4 + fNameLen, receiveByteLen - 4 - fNameLen);
+                    MessageCurrent = "Saving file...";
+                    System.Threading.Thread.Sleep(2000);
+                    MessageCurrent = txbFileName;
+                    writer.Close();
+
+                    //Xu ly
+                    string docName = "";
+                    try
+                    {
+                        // txbFileName = path + "/" + "THUCHANHDSP.pdf" ;
+                        if (txbFileName.Contains(".pdf"))
+                        {
+                            PDDocument doc = PDDocument.load(txbFileName);
+                            PDFTextStripper stripper = new PDFTextStripper();
+                            //richTextBox1.Text = (stripper.getText(doc));
+                            SautinSoft.PdfFocus f = new SautinSoft.PdfFocus();
+                            string filePath = txbFileName.Replace("\\", "/");
+                            docName = filePath.Substring(0, filePath.Length - 4) + ".docx"; // cắt .pdf rồi thêm đuôi docx
+                            f.OpenPdf(filePath);
+                            if (f.PageCount > 0)
+                            {
+                                f.WordOptions.Format = SautinSoft.PdfFocus.CWordOptions.eWordDocument.Docx;
+                                f.ToWord(docName);
+                            }
+                            MessageCurrent = "Name file: " + docName;
+                            //System.Threading.Thread.Sleep(2000);
+                            // Process.Start(docName);
+
+
+                        }
+                        else MessageBox.Show("File must be PDF extension");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
+
+                    fName = fName.Substring(0, fName.Length - 4) + ".docx";
+                    //Gui
+                    byte[] fNameByte = Encoding.ASCII.GetBytes(fName);
+                    MessageCurrent = "Dang dong goi tin..";
+                    //MessageCurrent = path + "   " + fName;
+                    System.Threading.Thread.Sleep(2000);
+                    ////
+                    byte[] fileData = File.ReadAllBytes(docName);
+                    byte[] serverData = new byte[4 + fNameByte.Length + fileData.Length];
+                    byte[] fNameLen_server = BitConverter.GetBytes(fNameByte.Length);
+                    fNameLen_server.CopyTo(serverData, 0);
+                    fNameByte.CopyTo(serverData, 4);
+                    fileData.CopyTo(serverData, 4 + fNameByte.Length);
+                    //
+                    MessageCurrent = "Sending to client the file";
+                    System.Threading.Thread.Sleep(2000);
+                    clientSock.Send(serverData);
+                    MessageCurrent = "The file was sent..";
+
+                }
+            }
+               //ClientSock.Close();
+            
+            catch
+            {
+                MessageCurrent = "Error! File not received";
+            }
+        }
+    }
+}
